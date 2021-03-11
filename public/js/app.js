@@ -39,7 +39,7 @@ weatherForm.addEventListener('submit', (e) => {
   messageTwo.textContent = '';
 
   // Make async request to backend api passing in the location in the dynamic url.
-  fetch(`http://localhost:3001/weather?address=${location}`)
+  fetch(`/weather?address=${location}`)
   .then(response => {
     // parse returned json.
     response.json()

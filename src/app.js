@@ -10,6 +10,8 @@ const forecast = require('./utils/forecast');
 console.log(path.join(__dirname, '../public'));
 
 const app = express();
+// set port number
+const port = process.env.PORT || 3001;
 
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
@@ -91,6 +93,6 @@ app.get('*', (req, res) => {
 
 // Start the web server using listen method.
 
-app.listen(3001, () => {
-  console.log('server running on port 3001');
+app.listen(port, () => {
+  console.log(`server running on port ${port}`);
 });
